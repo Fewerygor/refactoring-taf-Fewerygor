@@ -13,7 +13,8 @@ function heightValid(gender, height) {
 function barTest(gender, barReps, barSeconds) {
     if (gender == "male" && (barReps >=6 || barSeconds >=15)) {
         return true;
-    } else if (gender == "female" && (barReps >= 5 || barSeconds >= 12)){
+    } else if (gender == "female" && 
+    (barReps >= 5 || barSeconds >= 12)){
         return true;
     }
         return false;
@@ -29,9 +30,12 @@ function absTest(abs) {
 
 
 function runTest(gender, runDistance, runTime) {
-    if (gender == "male" && ((runDistance >= 3000 && runTime <= 720) || (runDistance >= 5000 && runTime <= 1200))) { 
+    if (gender == "male" && ((runDistance >= 3000 && runTime <= 720) ||
+    (runDistance >= 5000 && runTime <= 1200))) { 
         return true;
-    } else if (gender == "female" && ((runDistance >= 4000 && runTime <= 900) || (runDistance >= 6000 && runTime <= 1320))) {
+    } else if (gender == "female" && 
+    ((runDistance >= 4000 && runTime <= 900) || 
+    (runDistance >= 6000 && runTime <= 1320))) {
         return true;
     }
         return false;
@@ -50,8 +54,13 @@ function showMessage(message) {
     return upperCaseMessage.toUpperCase();
 }
 
-function areCandidateResultsValid(gender, height, barReps, barSeconds, abs, runDistance, runTime, swimDistance, swimTime, swimDive) {
-    if (heightValid(gender, height) && barTest(gender, barReps, barSeconds) && absTest(abs) && runTest(gender, runDistance, runTime) && swimTest(swimDistance, swimTime, swimDive)) {
+function areCandidateResultsValid(gender, height, barReps, 
+    barSeconds, abs, runDistance, runTime, swimDistance, 
+    swimTime, swimDive) {
+    if (heightValid(gender, height) && 
+    barTest(gender, barReps, barSeconds) && absTest(abs) && 
+    runTest(gender, runDistance, runTime) && 
+    swimTest(swimDistance, swimTime, swimDive)) {
         return true;
     }
         return false; 
