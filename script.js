@@ -54,7 +54,7 @@ function areCandidateResultsValid(gender, height, barReps, barSeconds, abs, runD
     if (heightValid(gender, height) && barTest(gender, barReps, barSeconds) && absTest(abs) && runTest(gender, runDistance, runTime) && swimTest(swimDistance, swimTime, swimDive)) {
         return true;
     }
-        return false;
+        return false; 
 }
 
 // Chamando a função com os parametros recebidos via script de teste
